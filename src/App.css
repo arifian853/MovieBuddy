@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+:root {
+  --dark-green : #093824;
+  --tea-green : #C5EBC3;
+  --white : #FFFCFF;
+  --black : #0E1116;
+}
+
+html, body {
+  background-color: var(--tea-green);
+  color: var(--black);
+  font-family: 'Quicksand', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.nav-main {
+  background-color: var(--dark-green);
+  color: var(--tea-green);
+  font-weight: 700;
+}
+
+.nav-item {
+  background-color: var(--dark-green);
+}
+
+.nav-link{
+  background-color: transparent;
+  border-radius: 10px;
+  transition: 0.4s;
+  padding: 10px;
+}
+
+.nav-link:hover {
+  background-color: var(--tea-green);
+  color: var(--dark-green);
+  transition: 0.4s;
+  border-radius: 10px;
+}
+
+.greetings {
+  height: 30vh;
+  padding: 1em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.container-popular {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow: auto;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.container-latest {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+}
+
+.movie-card {
+  background-color: var(--dark-green);
+  color: var(--white);
+  width: 310px;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.title {
+  padding: 1em;
+  height: 85px;
+}
+
+.btn-bottom {
+  padding: 1em;
+}
+
+.movie-card img {
+  width: 310px;
+  height: 450px;
+  border-radius: 10px 10px 0px 0px;
+}
