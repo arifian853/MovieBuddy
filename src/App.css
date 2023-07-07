@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
 :root {
-  --dark-green : #093824;
-  --tea-green : #C5EBC3;
-  --white : #FFFCFF;
-  --black : #0E1116;
+  --dark-green: #093824;
+  --tea-green: #C5EBC3;
+  --white: #FFFCFF;
+  --black: #0E1116;
 }
 
-html, body {
+html,
+body {
   background-color: var(--tea-green);
   color: var(--black);
   font-family: 'Quicksand', sans-serif;
@@ -15,6 +16,27 @@ html, body {
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+/*SCROLLBAR*/
+
+/* Width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Background */
+::-webkit-scrollbar-track {
+  background: var(--dark-green);
+}
+
+/*The Scrollbar itself*/
+::-webkit-scrollbar-thumb {
+  background: var(--tea-green);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--black);
 }
 
 .nav-main {
@@ -27,7 +49,7 @@ html, body {
   background-color: var(--dark-green);
 }
 
-.nav-link{
+.nav-link {
   background-color: transparent;
   border-radius: 10px;
   transition: 0.4s;
@@ -92,4 +114,68 @@ html, body {
   width: 310px;
   height: 450px;
   border-radius: 10px 10px 0px 0px;
+}
+
+.details-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.main-details {
+  background-color: var(--dark-green);
+  border-radius: 10px;
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  height: 70vh;
+}
+
+.rating{
+  background-color: var(--tea-green);
+  padding: 5px;
+  border-radius: 5px;
+  width: 75px;
+  color: var(--black);
+}
+
+.title-details {
+  padding: 1em;
+  height: 100px;
+  width: 100%;
+  background-color: var(--tea-green);
+  border-radius: 0px 0px 10px 10px;
+  border: 1px solid var(--dark-green);
+}
+
+.left {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+
+.left img {
+  width: 310px;
+  height: 450px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.right {
+  width: 50%;
+  padding: 2em 2em 2em 1em;
+  color: var(--tea-green);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.synopsis {
+  overflow: auto;
 }

@@ -1,13 +1,14 @@
+/* eslint-disable react/prop-types */
 import { Greetings } from "../components/Greetings"
 import { MovieList } from "../components/MovieList"
 import { Navbar } from "../components/Navbar"
 
-export const Home = () => {
+export const Home = ({ movies }) => {
     return (
         <div>
             <Navbar />
             <Greetings />
-            <MovieList />
+            <MovieList movies={movies} />
         </div>
     )
 }

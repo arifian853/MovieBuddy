@@ -1,18 +1,8 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+/* eslint-disable react/prop-types */
+import { Link } from "react-router-dom"
+import { BsArrowRightShort, BsStarFill } from 'react-icons/bs'
 
-export const PopularMovieCard = () => {
-    const [movies, setMovies] = useState([]);
-
-    useEffect(() => {
-        axios.get("https://api.themoviedb.org/3/movie/popular?api_key=6ff0f97c700b7989b21b3dfe42786a3f")
-            .then(response => {
-                setMovies(response.data.results);
-            })
-            .catch(error => {
-                console.log(error);
-            });
-    }, []);
+export const PopularMovieCard = ({ movies }) => {
     const IMG_URL = 'https://image.tmdb.org/t/p/w500';
     return (
 
@@ -21,12 +11,16 @@ export const PopularMovieCard = () => {
                 <div className="movie-card shadow-lg" key={movie.id}>
                     <img src={IMG_URL + movie.poster_path} alt="" />
                     <div className="title">
-                        <h1 className="font-black text-1xl">{movie.title}</h1>
+                        <Link to={`/details/${movie.id}`}>
+                            <h1 className="font-black text-1xl">{movie.title}</h1>
+                        </Link>
                         <p>Release date: {movie.release_date}</p>
                     </div>
-                    <div className="btn-bottom">
-                        <a href=""><button className="">Details </button></a>
+                    <Link to={`/details/${movie.id}`}>
+                    <div className="btn-bottom flex flex-row items-center justify-between">
+                        <button className="font-black flex gap-1 justify-center flex-row items-center">Details <BsArrowRightShort /></button>  <span className="rating flex items-center justify-center"><BsStarFill />{`${movie.vote_average}/10`}</span>
                     </div>
+                    </Link>
                 </div>
             ))}
         </>
