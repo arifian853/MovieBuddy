@@ -18,6 +18,11 @@ body {
   scroll-behavior: smooth;
 }
 
+hr {
+  border: 1px solid var(--dark-green);
+  width: 90%;
+}
+
 /*SCROLLBAR*/
 
 /* Width */
@@ -83,14 +88,13 @@ body {
   gap: 1em;
 }
 
-.container-latest {
+.popular {
+  padding: 48px;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
   align-items: center;
+  flex-direction: column;
   gap: 1em;
-  padding: 1em;
+  margin-top: -65px;
 }
 
 .movie-card {
@@ -131,10 +135,9 @@ body {
   display: flex;
   flex-direction: row;
   gap: 10px;
-  height: 70vh;
 }
 
-.rating{
+.rating {
   background-color: var(--tea-green);
   padding: 5px;
   border-radius: 5px;
@@ -148,7 +151,7 @@ body {
   width: 100%;
   background-color: var(--tea-green);
   border-radius: 0px 0px 10px 10px;
-  border: 1px solid var(--dark-green);
+  border-top: 1px solid var(--dark-green);
 }
 
 .left {
@@ -159,7 +162,6 @@ body {
   align-items: center;
   padding: 1em;
 }
-
 
 .left img {
   width: 310px;
@@ -178,4 +180,81 @@ body {
 
 .synopsis {
   overflow: auto;
+}
+
+
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+
+  html,
+  body {
+    background-color: var(--tea-green);
+    color: var(--black);
+    font-family: 'Quicksand', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  .popular {
+    padding: 1em;
+    margin-top: -20px;
+  }
+
+
+  .details-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: auto;
+  }
+
+  .main-details {
+    background-color: var(--dark-green);
+    border-radius: 10px;
+    width: 90%;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .right {
+    width: 100%;
+    padding: 2em 2em 2em 1em;
+    color: var(--tea-green);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+
+  .title-details {
+    padding: 1em;
+    height: 100px;
+    width: 100%;
+    background-color: var(--tea-green);
+    border-radius: 0px;
+    border: 1px solid var(--dark-green);
+  }
+
+
+  .left img {
+    width: 310px;
+    height: 450px;
+    border-radius: 10px 10px 0px 0px;
+    border: 1px solid var(--dark-green);
+  }
+
 }
